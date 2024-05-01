@@ -28,4 +28,4 @@ jobs:
             - name: Deploy to npm 🚀
               run: |
                   npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
-                  npm publish --workspaces true
+                  npm publish --workspaces true --access=public
