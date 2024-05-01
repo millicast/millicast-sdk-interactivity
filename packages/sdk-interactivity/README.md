@@ -1,11 +1,4 @@
-[![Build Package](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/build-package.yml/badge.svg)](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/build-package.yml)
-[![Build Documentation](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/build-documentation.yml/badge.svg)](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/build-documentation.yml)
-[![Publish Package](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/publish-package.yml/badge.svg)](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/publish-package.yml)
-[![npm](https://img.shields.io/npm/v/@millicast/sdk-interactivity)](https://www.npmjs.com/package/@millicast/sdk-interactivity)
-
-# Dolby.io - Millicast Interactivity SDK
-
-This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby.io Real-time Streaming](https://dolby.io/) platform.
+This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby.io Real-time Streaming (Millicast)](https://dolby.io/) platform.
 
 ## Getting Started
 
@@ -36,8 +29,8 @@ const room = new Room({
 room.on('viewercount', (count: number) => console.log('Viewer count is', count));
 
 room.on('sourceAdded', async (publisher: Publisher, source: Source) => {
-    const { identifier } = source;
-    console.log(`New ${identifier.sourceType} source: ${identifier.sourceName}`);
+    const { sourceId } = source;
+    console.log(`New ${sourceId.sourceType} source: ${sourceId.sourceName}`);
     console.log(`is available from ${publisher.name}.`);
 
     // Request to receive the source
@@ -66,8 +59,8 @@ room.on('publisherJoined', (publisher: Publisher) => {
     console.log(`${publisher.name} joined.`);
 });
 room.on('sourceAdded', (publisher: Publisher, source: Source) => {
-    const { identifier } = source;
-    console.log(`New ${identifier.sourceType} source: ${identifier.sourceName}`);
+    const { sourceId } = source;
+    console.log(`New ${sourceId.sourceType} source: ${sourceId.sourceName}`);
     console.log(`is available from ${publisher.name}.`);
 });
 
@@ -110,8 +103,8 @@ room.on('publisherJoined', (publisher: Publisher) => {
     console.log(`${publisher.name} joined.`);
 });
 room.on('sourceAdded', (publisher: Publisher, source: Source) => {
-    const { identifier } = source;
-    console.log(`New ${identifier.sourceType} source: ${identifier.sourceName}`);
+    const { sourceId } = source;
+    console.log(`New ${sourceId.sourceType} source: ${sourceId.sourceName}`);
     console.log(`is available from ${publisher.name}.`);
 });
 

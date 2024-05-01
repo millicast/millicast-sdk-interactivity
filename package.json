@@ -1,0 +1,21 @@
+{
+  "name": "@millicast/sdk-interactivity",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "docs": "npm run docs --workspaces --if-present && typedoc",
+    "build": "npm run build --workspaces --if-present",
+    "prettier": "npm run prettier --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "author": "Fabien Lavocat <fabien.lavocat@dolby.com>",
+  "license": "Millicast",
+  "devDependencies": {
+      "typedoc": "^0.25.13",
+      "typedoc-plugin-mdn-links": "^3.1.23",
+      "typescript": "^5.4.5"
+  }
+}

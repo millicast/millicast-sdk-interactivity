@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`utils utils should match the snapshot 1`] = `
+{
+  "firstOrUndefined": [Function],
+  "isNotDefined": [Function],
+  "sleep": [Function],
+}
+`;

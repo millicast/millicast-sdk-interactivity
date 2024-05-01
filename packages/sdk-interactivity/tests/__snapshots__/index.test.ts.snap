@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SDK SDK should match the snapshot 1`] = `
+{
+  "Logger": {
+    "DEBUG": {
+      "name": "DEBUG",
+      "value": 2,
+    },
+    "ERROR": {
+      "name": "ERROR",
+      "value": 8,
+    },
+    "INFO": {
+      "name": "INFO",
+      "value": 3,
+    },
+    "OFF": {
+      "name": "OFF",
+      "value": 99,
+    },
+    "TIME": {
+      "name": "TIME",
+      "value": 4,
+    },
+    "TRACE": {
+      "name": "TRACE",
+      "value": 1,
+    },
+    "VERSION": "1.6.1",
+    "WARN": {
+      "name": "WARN",
+      "value": 5,
+    },
+    "createDefaultHandler": [Function],
+    "debug": [Function],
+    "enabledFor": [Function],
+    "error": [Function],
+    "get": [Function],
+    "getLevel": [Function],
+    "info": [Function],
+    "log": [Function],
+    "setDefaults": [Function],
+    "setHandler": [Function],
+    "setLevel": [Function],
+    "time": [Function],
+    "timeEnd": [Function],
+    "trace": [Function],
+    "useDefaults": [Function],
+    "warn": [Function],
+  },
+  "PublishedSource": [Function],
+  "Publisher": [Function],
+  "Room": [Function],
+  "Source": [Function],
+  "SourceIdentifier": [Function],
+  "SourceType": {
+    "Camera": "camera",
+    "Custom": "custom",
+    "Screenshare": "screenshare",
+  },
+}
+`;

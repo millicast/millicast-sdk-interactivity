@@ -1,0 +1,33 @@
+{
+    "extends": ["../../typedoc.base.json"],
+    "name": "Interactivity SDK",
+    "json": "../../docs-json/millicast-sdk-interactivity.json",
+    "entryPoints": ["src/index.ts"],
+    "entryPointStrategy": "expand",
+    "excludeExternals": true,
+    "excludePrivate": true,
+    "excludeNotDocumented": true,
+    "excludeNotDocumentedKinds": ["Property", "Interface", "TypeAlias"],
+    "plugin": ["typedoc-plugin-mdn-links"],
+    "externalSymbolLinkMappings": {
+        // used by {@link !Promise}
+        "global": {
+            "Publish": "https://millicast.github.io/millicast-sdk/Publish.html",
+            "View": "https://millicast.github.io/millicast-sdk/View.html",
+            "MediaStreamConstraints": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints",
+            "Error": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"
+        },
+        "typescript": {
+            "Publish": "https://millicast.github.io/millicast-sdk/Publish.html",
+            "View": "https://millicast.github.io/millicast-sdk/View.html",
+            "MediaStreamConstraints": "https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints",
+            "Error": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error"
+        },
+        // used by @millicast/sdk
+        "@millicast/sdk": {
+            "\"@millicast/sdk\".Publish": "https://millicast.github.io/millicast-sdk/Publish.html",
+            "\"@millicast/sdk\".View": "https://millicast.github.io/millicast-sdk/View.html"
+        }
+    },
+    "out": "docs"
+}
