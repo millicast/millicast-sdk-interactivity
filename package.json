@@ -1,5 +1,5 @@
 {
-  "name": "@millicast/sdk-interactivity",
+  "name": "sdk-interactivity",
   "version": "0.1.0",
   "private": true,
   "workspaces": [
