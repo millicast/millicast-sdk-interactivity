@@ -15,6 +15,15 @@ To get started, install this SDK into your web application. The [@millicast/sdk]
 npm install @millicast/sdk-interactivity
 ```
 
+To import this SDK via script, you will need to load the SDK as UMD as well as the Millicast SDK. An example is provided in the [./example](example) folder of this repository.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@millicast/sdk/dist/millicast.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@millicast/sdk-interactivity/dist/millicast-sdk-interactivity.min.js"></script>
+```
+
+Then you can use the SDK using the variable `MillicastInteractivity`.
+
 ### Events
 
 The SDK can trigger the following events:
