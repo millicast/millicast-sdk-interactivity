@@ -2,10 +2,12 @@
 [![Build Documentation](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/build-documentation.yml/badge.svg)](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/build-documentation.yml)
 [![Publish Package](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/publish-package.yml/badge.svg)](https://github.com/millicast/millicast-sdk-interactivity/actions/workflows/publish-package.yml)
 [![npm](https://img.shields.io/npm/v/@millicast/sdk-interactivity)](https://www.npmjs.com/package/@millicast/sdk-interactivity)
+[![GitHub](https://img.shields.io/badge/GitHub-_?logo=GitHub&labelColor=black&color=blue)](https://github.com/millicast/millicast-sdk-interactivity)
+[![Documentation](https://img.shields.io/badge/Documentation-_?logo=readthedocs&labelColor=black&color=blue)](https://millicast.github.io/millicast-sdk-interactivity/)
 
-# Dolby.io - Millicast Interactivity SDK
+# Dolby Millicast Interactivity SDK
 
-This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby.io Real-time Streaming](https://dolby.io/) platform.
+This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby Millicast](https://dolby.io/) platform.
 
 ## Getting Started
 
@@ -15,7 +17,7 @@ To get started, install this SDK into your web application. The [@millicast/sdk]
 npm install @millicast/sdk-interactivity
 ```
 
-To import this SDK via script, you will need to load the SDK as UMD as well as the Millicast SDK. An example is provided in the [./example](example) folder of this repository.
+To import this SDK via script, you will need to load the SDK as UMD as well as the Millicast SDK. An example is provided in the `example` folder of this repository.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@millicast/sdk/dist/millicast.umd.min.js"></script>

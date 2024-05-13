@@ -18,7 +18,7 @@ import { SourceType } from './sourceType';
 export type StreamInformation = {
     /** Name of the stream. */
     streamName: string;
-    /** Dolby.io Real-time streaming account ID. */
+    /** Dolby Millicast account ID. */
     streamAccountId: string;
 };
 

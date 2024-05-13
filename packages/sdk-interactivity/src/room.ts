@@ -28,7 +28,7 @@ export interface Room {
 
 /**
  * Representation of a stream. This class is the starting point for the SDK.
- * Create a instance of this class, connect to the Dolby.io Real-time Streaming platform and start receiving & publishing streams.
+ * Create a instance of this class, connect to the Dolby Millicast platform and start receiving & publishing streams.
  *
  * @example
  * ```ts
@@ -82,7 +82,7 @@ export class Room extends EventEmitter implements Room {
         return [...this.#publishedSources.values()];
     }
 
-    /** Maximum number of sources that can be published. */
+    /** Maximum number of sources that can be published from a single client. */
     readonly MAX_SOURCES: number = 5;
 
     /**

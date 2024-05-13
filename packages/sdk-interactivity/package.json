@@ -1,7 +1,7 @@
 {
     "name": "@millicast/sdk-interactivity",
     "version": "0.1.0",
-    "description": "Millicast SDK Interactivity",
+    "description": "Dolby Millicast Interactivity SDK",
     "main": "dist/millicast-sdk-interactivity.js",
     "scripts": {
         "build": "webpack",
@@ -10,7 +10,7 @@
         "docs": "typedoc"
     },
     "author": "Fabien Lavocat <fabien.lavocat@dolby.com>",
-    "license": "MIT",
+    "license": "Millicast",
     "keywords": [
         "api",
         "sdk",
@@ -22,7 +22,8 @@
     ],
     "files": [
         "dist/*",
-        "README.md"
+        "README.md",
+        "../LICENSE"
     ],
     "dependencies": {
         "@millicast/sdk": "^0.1.44",

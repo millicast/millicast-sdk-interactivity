@@ -54,9 +54,9 @@ export class SourceIdentifier {
     }
 
     /**
-     * Get a {@link SourceIdentifier} object extracted from the source ID received from the Dolby.io Real-time Streaming platform.
+     * Get a {@link SourceIdentifier} object extracted from the source ID received from the Dolby Millicast platform.
      *
-     * @param sourceId Source Identifier received from the Dolby.io Real-time Streaming platform.
+     * @param sourceId Source Identifier received from the Dolby Millicast platform.
      *
      * @returns The {@link SourceIdentifier} object representing the source identifier.
      */

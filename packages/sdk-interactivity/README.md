@@ -1,4 +1,4 @@
-This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby.io Real-time Streaming (Millicast)](https://dolby.io/) platform.
+This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby Millicast](https://dolby.io/) platform.
 
 ## Getting Started
 
@@ -7,6 +7,15 @@ To get started, install this SDK into your web application. The [@millicast/sdk]
 ```bash
 npm install @millicast/sdk-interactivity
 ```
+
+To import this SDK via script, you will need to load the SDK as UMD as well as the Millicast SDK. An example is provided in the `example` folder of this repository.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@millicast/sdk/dist/millicast.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@millicast/sdk-interactivity/dist/millicast-sdk-interactivity.min.js"></script>
+```
+
+Then you can use the SDK using the variable `MillicastInteractivity`.
 
 ### Events
 
