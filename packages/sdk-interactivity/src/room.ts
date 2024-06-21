@@ -183,8 +183,8 @@ export class Room extends EventEmitter implements Room {
                 subscriberToken: options?.subscriberToken,
             });
 
-        this.#viewer = new View(this.#streamInfo.streamName, tokenGeneratorViewer, null, true);
-
+        this.#viewer = new View(undefined, tokenGeneratorViewer, null, true);
+ 
         this.#viewer.on('broadcastEvent', this.onBroadcastEvent);
 
         await this.#viewer.connect({

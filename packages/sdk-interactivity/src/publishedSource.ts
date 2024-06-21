@@ -66,7 +66,7 @@ export class PublishedSource {
                 streamName: this.#streamName,
             });
 
-        this.#publisher = new Publish(this.#streamName, tokenGeneratorPublisher, true);
+        this.#publisher = new Publish(undefined, tokenGeneratorPublisher, true);
 
         const optionsWithMediaStream = options as PublishWithStreamOptions;
         if (optionsWithMediaStream.mediaStream) {
@@ -87,6 +87,7 @@ export class PublishedSource {
         await this.#publisher.connect({
             mediaStream: tracks,
             sourceId: this.#sourceId.sourceId,
+            simulcast: true,
         });
     };
 
