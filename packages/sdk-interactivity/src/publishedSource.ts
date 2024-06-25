@@ -80,14 +80,18 @@ export class PublishedSource {
             this.#audioTrack = firstOrUndefined(mediaStream.getAudioTracks());
         }
 
+        let simulcast: boolean = false;
         const tracks: MediaStreamTrack[] = [];
-        if (this.#videoTrack) tracks.push(this.#videoTrack);
+        if (this.#videoTrack) {
+            simulcast = true;
+            tracks.push(this.#videoTrack)
+        };
         if (this.#audioTrack) tracks.push(this.#audioTrack);
 
         await this.#publisher.connect({
             mediaStream: tracks,
             sourceId: this.#sourceId.sourceId,
-            simulcast: true,
+            simulcast: simulcast,
         });
     };
 

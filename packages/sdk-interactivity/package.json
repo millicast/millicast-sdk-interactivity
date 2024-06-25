@@ -1,6 +1,6 @@
 {
     "name": "@millicast/sdk-interactivity",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Dolby Millicast Interactivity SDK",
     "main": "dist/millicast-sdk-interactivity.js",
     "scripts": {
