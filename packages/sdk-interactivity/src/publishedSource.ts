@@ -84,8 +84,8 @@ export class PublishedSource {
         const tracks: MediaStreamTrack[] = [];
         if (this.#videoTrack) {
             simulcast = true;
-            tracks.push(this.#videoTrack)
-        };
+            tracks.push(this.#videoTrack);
+        }
         if (this.#audioTrack) tracks.push(this.#audioTrack);
 
         await this.#publisher.connect({
