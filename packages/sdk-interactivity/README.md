@@ -24,11 +24,11 @@ Then you can use the SDK using the variable `MillicastInteractivity`.
 
 The SDK can trigger the following events:
 
--   `publisherJoined` - Event triggered when a new publisher starts publishing to the stream.
--   `publisherLeft` - Event triggered when a publisher stops publishing to the stream.
--   `sourceAdded` - Event triggered when a new source is being published to the stream.
--   `sourceRemoved` - Event triggered when a source stopped being published.
--   `viewercount` - Event triggered from time to time to indicate the number of viewers connected to the stream.
+- `publisherJoined` - Event triggered when a new publisher starts publishing to the stream.
+- `publisherLeft` - Event triggered when a publisher stops publishing to the stream.
+- `sourceAdded` - Event triggered when a new source is being published to the stream.
+- `sourceRemoved` - Event triggered when a source stopped being published.
+- `viewercount` - Event triggered from time to time to indicate the number of viewers connected to the stream.
 
 ```ts
 import { Publisher, Room, Source } from '@millicast/sdk-interactivity';
@@ -194,8 +194,8 @@ Logger.useDefaults({
 
 ## Related Projects
 
--   [Dolby.io WebRTC Statistics](https://github.com/DolbyIO/web-webrtc-stats)
--   [Millicast SDK](https://github.com/millicast/millicast-sdk)
--   [js-logger](https://github.com/jonnyreeves/js-logger)
--   [TypeDoc](https://typedoc.org)
--   [Jest](https://jestjs.io/)
+- [Dolby.io WebRTC Statistics](https://github.com/DolbyIO/web-webrtc-stats)
+- [Millicast SDK](https://github.com/millicast/millicast-sdk)
+- [js-logger](https://github.com/jonnyreeves/js-logger)
+- [TypeDoc](https://typedoc.org)
+- [Jest](https://jestjs.io/)

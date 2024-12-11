@@ -60,7 +60,7 @@ export type PublishWithConstraintsOptions = {
      *
      * If `true` is specified for a media type, the resulting stream is required to have that type of track in it. If one cannot be included for any reason, the returned promise will reject.
      * If `false` is specified for a media type, the resulting stream must not have that type of track, or the returned promise will reject. Because both `video` and `audio` default to `false`, if the constraints object `contains` neither property or if it's not present at all, the returned promise will always reject.
-     * If an object is specified for a media type, the object is read as a {@link MediaTrackConstraints} dictionary.
+     * If an object is specified for a media type, the object is read as a {@link !MediaStreamConstraints MediaStreamConstraints} dictionary.
      */
     constraints: MediaStreamConstraints;
 };
