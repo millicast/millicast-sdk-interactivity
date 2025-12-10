@@ -7,7 +7,7 @@
 
 # Dolby Millicast Interactivity SDK
 
-This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby Millicast](https://dolby.io/) platform.
+This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby OptiView](https://optiview.dolby.com) platform.
 
 ## Getting Started
 

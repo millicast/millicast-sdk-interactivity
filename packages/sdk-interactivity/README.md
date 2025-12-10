@@ -1,7 +1,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-_?logo=GitHub&labelColor=black&color=blue)](https://github.com/millicast/millicast-sdk-interactivity)
 [![Documentation](https://img.shields.io/badge/Documentation-_?logo=readthedocs&labelColor=black&color=blue)](https://millicast.github.io/millicast-sdk-interactivity/)
 
-This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby Millicast](https://dolby.io/) platform.
+This project is an SDK built on top of the [@millicast/sdk](https://github.com/millicast/millicast-sdk) library to provide an easier way to manage bi-directional communications on the [Dolby OptiView](https://optiview.dolby.com) platform.
 
 ## Getting Started
 
