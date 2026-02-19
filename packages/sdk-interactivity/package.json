@@ -11,6 +11,10 @@
     },
     "author": "Fabien Lavocat <fabien.lavocat@dolby.com>",
     "license": "Millicast",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/millicast/millicast-sdk-interactivity"
+    },
     "keywords": [
         "api",
         "sdk",
