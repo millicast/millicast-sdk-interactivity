@@ -1,31 +1,39 @@
 name: Publish Package
 
 on:
-    release:
-        types: [published]
+  release:
+    types: [published]
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 
 jobs:
-    publish-package:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout 🛎️
-              uses: actions/checkout@v4
-              with:
-                  persist-credentials: false
+  publish-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-            - name: Print NPM version 🌎
-              run: npm --version
+      - name: Print NPM version 🌎
+        run: npm --version
 
-            - name: Install the dependencies 🧱
-              run: npm ci
+      - name: Install the dependencies 🧱
+        run: npm ci
 
-            - name: Test the package 🔧
-              run: npm run test
+      - name: Test the package 🔧
+        run: npm run test
 
-            - name: Build the package 🔨
-              run: npm run build
+      - name: Build the package 🔨
+        run: npm run build
+      
+      - name: Configure NPMJS 🔧
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
 
-            - name: Deploy to npm 🚀
-              run: |
-                  npm config set //registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
-                  npm publish --workspaces true --access=public
+      - name: Deploy to NPMJS 🚀
+        run: npm publish

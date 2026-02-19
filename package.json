@@ -1,6 +1,6 @@
 {
   "name": "sdk-interactivity",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -14,8 +14,8 @@
   "author": "Fabien Lavocat <fabien.lavocat@dolby.com>",
   "license": "Millicast",
   "devDependencies": {
-      "typedoc": "^0.28.15",
-      "typedoc-plugin-mdn-links": "^5.0.10",
+      "typedoc": "^0.28.17",
+      "typedoc-plugin-mdn-links": "^5.1.1",
       "typescript": "^5.9.3"
   }
 }
