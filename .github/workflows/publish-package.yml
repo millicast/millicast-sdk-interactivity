@@ -36,4 +36,4 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Deploy to NPMJS 🚀
-        run: npm publish
+        run: npm publish --workspaces true --access=public
