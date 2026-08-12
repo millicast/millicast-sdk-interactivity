@@ -6,7 +6,7 @@ const sleep = (seconds: number) => new Promise<void>((resolve) => setTimeout(res
 
 const isNotDefined = (value: string | null | undefined) => !value || !value.length;
 
-const firstOrUndefined = <T>(array: Array<T>): T => {
+const firstOrUndefined = <T>(array: Array<T>): T | undefined => {
     if (array && array.length) {
         return array[0];
     }

@@ -8,13 +8,13 @@ export class Source {
 
     #viewer: View;
     #tracks: MediaTrackInfo[];
-    #audioMediaId: string;
-    #audioTrackId: string;
-    #videoMediaId: string;
-    #videoTrackId: string;
+    #audioMediaId?: string | undefined | null;
+    #audioTrackId?: string | undefined;
+    #videoMediaId?: string | undefined | null;
+    #videoTrackId?: string | undefined;
 
     /** @ignore */
-    get videoMediaId(): string {
+    get videoMediaId(): string | undefined | null {
         return this.#videoMediaId;
     }
 
@@ -67,14 +67,14 @@ export class Source {
      */
     public stop = async (): Promise<void> => {
         this.#logger.info('About to unproject Source ID:', this.#audioMediaId, this.#videoMediaId);
-        await this.#viewer.unproject([this.#audioMediaId, this.#videoMediaId]);
+        await this.#viewer.unproject([this.#audioMediaId!, this.#videoMediaId!]);
     };
 
     /**
      * Project a source.
      */
     private project = async (): Promise<void> => {
-        const mapping = [];
+        const mapping: any = [];
         if (this.#audioMediaId) {
             mapping.push({
                 media: 'audio',

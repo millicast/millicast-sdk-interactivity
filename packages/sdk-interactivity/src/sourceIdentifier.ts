@@ -61,9 +61,9 @@ export class SourceIdentifier {
      * @returns The {@link SourceIdentifier} object representing the source identifier.
      */
     public static fromSourceId = (sourceId: string): SourceIdentifier => {
-        let publisherName: string;
-        let sourceType: SourceType;
-        let sourceName: string;
+        let publisherName: string | undefined = undefined;
+        let sourceType: SourceType | undefined = undefined;
+        let sourceName: string | undefined = undefined;
 
         try {
             const jsonStr = atob(sourceId);

@@ -53,14 +53,14 @@ export interface Room {
 export class Room extends EventEmitter implements Room {
     #logger: ILogger;
     #streamInfo: StreamInformation;
-    #publisherName: string;
+    #publisherName?: string;
 
-    #viewer: View;
+    #viewer?: View;
 
     /**
      * Gets the Millicast {@link !View View} object once the SDK has been initialized.
      */
-    get viewer(): View {
+    get viewer(): View | undefined {
         return this.#viewer;
     }
 
@@ -106,14 +106,14 @@ export class Room extends EventEmitter implements Room {
         if (event.name === 'active') {
             const { sourceId, tracks } = event.data as MediaStreamSource;
             this.#logger.debug(`New source available - ${sourceId}`);
-            if (this.#publishedSources.has(sourceId)) {
+            if (this.#publishedSources.has(sourceId!)) {
                 this.#logger.debug('This is a local source so ignoring it.');
                 return;
             }
 
-            const source = new Source(this.#logger, this.#viewer, sourceId, tracks);
+            const source = new Source(this.#logger, this.#viewer!, sourceId!, tracks);
 
-            let publisher: Publisher;
+            let publisher: Publisher | undefined;
             if (this.#publishers.has(source.identifier.publisherName)) {
                 publisher = this.#publishers.get(source.identifier.publisherName);
             } else {
@@ -122,11 +122,11 @@ export class Room extends EventEmitter implements Room {
                 this.emit('publisherJoined', publisher);
             }
 
-            publisher.addSource(source);
-            this.emit('sourceAdded', publisher, source);
+            publisher?.addSource(source);
+            this.emit('sourceAdded', publisher!, source);
         } else if (event.name === 'inactive') {
             const { sourceId } = event.data as MediaStreamSource;
-            const sourceIdentifier = SourceIdentifier.fromSourceId(sourceId);
+            const sourceIdentifier = SourceIdentifier.fromSourceId(sourceId!);
 
             this.#logger.debug(`The source has been stopped - ${sourceId}`);
             if (sourceIdentifier.publisherName === this.#publisherName) {
@@ -136,13 +136,13 @@ export class Room extends EventEmitter implements Room {
 
             if (this.#publishers.has(sourceIdentifier.publisherName)) {
                 const publisher = this.#publishers.get(sourceIdentifier.publisherName);
-                publisher.removeSource(sourceId);
+                publisher?.removeSource(sourceId!);
 
-                this.emit('sourceRemoved', publisher, sourceIdentifier);
+                this.emit('sourceRemoved', publisher!, sourceIdentifier);
 
-                if (publisher.sources.length <= 0) {
+                if (publisher!.sources.length <= 0) {
                     this.#publishers.delete(sourceIdentifier.publisherName);
-                    this.emit('publisherLeft', publisher);
+                    this.emit('publisherLeft', publisher!);
                 }
             }
         } else if (event.name === 'viewercount') {
@@ -183,8 +183,9 @@ export class Room extends EventEmitter implements Room {
                 subscriberToken: options?.subscriberToken,
             });
 
-        this.#viewer = new View(undefined, tokenGeneratorViewer, null, true);
+        this.#viewer = new View(undefined!, tokenGeneratorViewer, undefined, true);
 
+        // @ts-ignore
         this.#viewer.on('broadcastEvent', this.onBroadcastEvent);
 
         await this.#viewer.connect({
@@ -211,7 +212,7 @@ export class Room extends EventEmitter implements Room {
             throw Error(`Maximum number of ${this.MAX_SOURCES} sources reached!`);
         }
 
-        const sourceId = new SourceIdentifier(this.#publisherName, options.sourceType, options.sourceName ?? options.sourceType);
+        const sourceId = new SourceIdentifier(this.#publisherName!, options.sourceType, options.sourceName ?? options.sourceType);
 
         const publishedSource = new PublishedSource(this.#logger, this.#streamInfo.streamName, sourceId);
         await publishedSource.publish(options);

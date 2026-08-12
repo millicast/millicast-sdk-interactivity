@@ -30,7 +30,7 @@ export class Publisher {
     removeSource = async (sourceId: string): Promise<void> => {
         if (this.#sources.has(sourceId)) {
             const source = this.#sources.get(sourceId);
-            await source.stop();
+            await source?.stop();
 
             this.#sources.delete(sourceId);
         }

@@ -22,30 +22,30 @@ export class PublishedSource {
         return this.#sourceId;
     }
 
-    #audioTrack: MediaStreamTrack;
+    #audioTrack?: MediaStreamTrack;
 
     /**
      * Gets the audio track.
      */
-    get audioTrack(): MediaStreamTrack {
+    get audioTrack(): MediaStreamTrack | undefined {
         return this.#audioTrack;
     }
 
-    #videoTrack: MediaStreamTrack;
+    #videoTrack?: MediaStreamTrack;
 
     /**
      * Gets the video track.
      */
-    get videoTrack(): MediaStreamTrack {
+    get videoTrack(): MediaStreamTrack | undefined {
         return this.#videoTrack;
     }
 
-    #publisher: Publish;
+    #publisher?: Publish;
 
     /**
      * Gets the Millicast {@link !Publish Publish} object used to publish the source to the stream.
      */
-    get publisher(): Publish {
+    get publisher(): Publish | undefined {
         return this.#publisher;
     }
 
@@ -153,7 +153,7 @@ export class PublishedSource {
         if (!this.#audioTrack) return false;
 
         try {
-            const peerConnection: RTCPeerConnection = this.#publisher.getRTCPeerConnection();
+            const peerConnection: RTCPeerConnection = this.#publisher!.getRTCPeerConnection();
             const stats: RTCStatsReport = await peerConnection.getStats(this.#audioTrack);
 
             const stat = [...stats.values()].find((s) => s.kind === 'audio' && s.audioLevel);
