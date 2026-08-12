@@ -3,7 +3,7 @@
     "compilerOptions": {
         "rootDir": ".",
         "outDir": "./dist",
-        "types": ["node"]
+        "types": ["node", "jest"]
     },
     "lib": ["es2015"],
     "include": ["src"]
