@@ -1,6 +1,6 @@
 {
     "name": "@millicast/sdk-interactivity",
-    "version": "0.3.2",
+    "version": "0.4.1",
     "description": "Dolby Millicast Interactivity SDK",
     "main": "dist/millicast-sdk-interactivity.js",
     "scripts": {
@@ -31,20 +31,20 @@
         "../LICENSE"
     ],
     "dependencies": {
-        "@millicast/sdk": "^0.6.1",
+        "@millicast/sdk": "^0.8.0",
         "js-logger": "^1.6.1"
     },
     "devDependencies": {
         "@types/jest": "^30.0.0",
-        "jest": "^30.4.2",
-        "jest-environment-jsdom": "^30.4.1",
+        "jest": "^30.5.1",
+        "jest-environment-jsdom": "^30.5.1",
         "prettier": "^3.9.6",
         "ts-jest": "^29.4.12",
         "ts-loader": "^9.6.2",
         "typedoc": "^0.28.20",
         "typedoc-plugin-mdn-links": "^5.1.1",
-        "typescript": "^5.9.3",
-        "webpack": "^5.109.2",
-        "webpack-cli": "^7.2.2"
+        "typescript": "^6",
+        "webpack": "^5.110.3",
+        "webpack-cli": "^7.2.3"
     }
 }
